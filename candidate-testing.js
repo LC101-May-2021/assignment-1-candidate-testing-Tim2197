@@ -9,7 +9,7 @@ let candidateName = String();
 
 let question = ("Who was the first American woman in space?: ");
 let correctAnswer = "Sally Ride";
-let candidateAnswer;
+let candidateAnswer = '';
 let questions = ["1. Who was the first American woman in space?: ","2. True or false: 5 kilometer == 5000 meters?: ","3. (5 + 3)/2 * 10 = ?: ","4. Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?: ","5. What is the minimum crew size for the ISS?: "];
 let correctAnswers = ["Sally Ride","true","40","Trajectory","3"];
 let candidateAnswers= [];
@@ -19,11 +19,9 @@ function askForName (){
 
   // TODO 1.1b: Ask for candidate's name //
 }
-//console.log('Hello ${candidateName}!')
 
 function askQuestion() {
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-//candidateAnswer = input.question (question);
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //\
 for (let i = 0; i < questions.length; i++){
   let answer = input.question(questions[i]);
   candidateAnswers.push(answer);
@@ -31,18 +29,12 @@ for (let i = 0; i < questions.length; i++){
   }
 }
 
-/*if (candidateAnswer === "Sally Ride") {
- console.log (`Your answer was "${candidateAnswer}". Your answer is correct.`);
-} else {
-  console.log (`Your answer was "${candidateAnswer}". Your answer is incorrect.`);
-}
-}*/
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  /*console.log (`Your answers were:  ${candidateAnswers[0]}, ${candidateAnswers[1]}, ${candidateAnswers[2]}, ${candidateAnswers[3]}, ${candidateAnswers[4]}. \nThe correct answers were: ${correctAnswers[0]}, ${correctAnswers[1]}, ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}.`)*/
-  let grade;
+  
+  let grade = 0;
   let correct = 0;
   for (let j = 0; j < candidateAnswers.length; j++){
     if (candidateAnswers[j].toUpperCase() === correctAnswers[j].toUpperCase()){
